@@ -1,0 +1,37 @@
+
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  
+int guesses=10,guess;
+//carries out the while function once the guess is incorrect and you still have guesses
+cout<< "Hello, welcome the guessing game. Pick a number between 1 and 100 to win! You have 10 guesses. \n" <<endl;
+
+while (guess!=35 && guesses>0){
+cout<< "Enter your guess \n" <<endl;
+cin >> guess;
+guesses--;
+
+if (guess == 35) // this sets the correct answer to being 35
+cout<<"congrats " << 35 << " is correct " <<endl;
+else 
+{ 
+  cout << "your wrong you have " << (guesses) << " more guesses " <<endl;
+  if (guesses == 0)
+  cout << "The game is over, your out of guesses"<<endl;
+}
+
+
+if (guess>35)
+{cout<< "the answer is lower\n"<<endl;}
+else if (guess ==35)
+{cout << "spot on"<<endl;}
+else 
+{cout<< "the answer is higher\n"<<endl;}
+}
+return 0;
+}
